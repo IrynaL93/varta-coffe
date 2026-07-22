@@ -77,7 +77,18 @@
   /* ---------- Hero ---------- */
   #hero{ position:relative; min-height:100svh; overflow:hidden; }
   #hero-bg{ position:absolute; inset:-6% -6% -6% -6%; background-size:cover; background-position:center; will-change:transform; }
-  #hero-overlay{ position:absolute; inset:0; background: linear-gradient(180deg, rgba(28,19,16,.55) 0%, rgba(28,19,16,.45) 40%, rgba(28,19,16,.82) 100%); }
+  #hero-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.55) 0%,
+      rgba(255,255,255,.15) 18%,
+      rgba(0,0,0,.18) 40%,
+      rgba(0,0,0,.55) 100%
+    );
+}
   .steam-path{ stroke-dasharray: 240; stroke-dashoffset: 240; animation: draw 3.5s ease-in-out infinite; }
   .steam-path.s2{ animation-delay: .6s; }
   .steam-path.s3{ animation-delay: 1.2s; }
