@@ -22,26 +22,40 @@
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
-  tailwind.config = {
-   theme: 
-   { 
-     extend: 
-   { 
-     colors: 
-   { 
-     espresso: '#2E211B', 
-     espressoDeep: '#1C1310', 
-     cream: '#F7F2EC', 
-     sand: '#E7D7C9', 
-     caramel: '#C08A4D', 
-     caramelDark: '#A06E38',
-        fontFamily: {
-          serif: ['"Playfair Display"', 'serif'],
-          sans: ['Inter', 'sans-serif'],
-        },
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        espresso: '#111111',
+        espressoDeep: '#000000',
+        cream: '#FFFFFF',
+        sand: '#F5F5F5',
+        caramel: '#9CA3AF',
+        caramelDark: '#4B5563',
+      },
+      fontFamily: {
+        serif: ['"Playfair Display"', 'serif'],
+        sans: ['Inter', 'sans-serif'],
       },
     },
-  };
+  },
+};
+</script>
+
+<style>
+  :root {
+    --seal: #FFFFFF;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: #FFFFFF;
+    color: #111111;
+  }
+</style>
 </script>
 
 <style>
