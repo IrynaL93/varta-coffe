@@ -40,22 +40,55 @@ tailwind.config = {
     },
   },
 };
-</script>
 
 <style>
-  :root {
-    --seal: #FFFFFF;
+  :root{
+    --seal:#FFFFFF;
   }
 
-  html {
-    scroll-behavior: smooth;
+  html{scroll-behavior:smooth;}
+  body{
+    background:#FFFFFF;
+    color:#111111;
   }
 
-  body {
-    background: #FFFFFF;
-    color: #111111;
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.16,.8,.3,1),transform .9s cubic-bezier(.16,.8,.3,1);}
+  .reveal.in-view{opacity:1;transform:translateY(0);}
+  .reveal-scale{opacity:0;transform:scale(.94);transition:opacity .8s ease,transform .8s ease;}
+  .reveal-scale.in-view{opacity:1;transform:scale(1);}
+
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal,.reveal-scale{opacity:1!important;transform:none!important;transition:none!important;}
+    *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;}
   }
+
+  #site-header{transition:background-color .5s ease,box-shadow .5s ease,padding .4s ease,backdrop-filter .5s ease;}
+  #site-header.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(0,0,0,.08);}
+  .nav-link::after{background:#111;}
+
+  .btn-primary{background:#111;color:#fff;transition:.35s;}
+  .btn-primary:hover{background:#000;transform:translateY(-2px);box-shadow:0 10px 24px -8px rgba(0,0,0,.35);}
+  .btn-outline{border:1px solid #fff;color:#fff;transition:.35s;}
+  .btn-outline:hover{background:#fff;color:#111;transform:translateY(-2px);}
+  .btn-outline-dark{border:1px solid #111;color:#111;transition:.35s;}
+  .btn-outline-dark:hover{background:#111;color:#fff;}
+
+  #hero-overlay{background:linear-gradient(180deg,rgba(0,0,0,.45),rgba(0,0,0,.35) 40%,rgba(0,0,0,.78));}
+  #hero-bg{filter:grayscale(100%);}
+
+  .offer-card:hover{box-shadow:0 24px 40px -20px rgba(0,0,0,.18);border-color:#111;}
+  .offer-underline{background:#111;}
+  .masonry-item::after{background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.55));}
+  #lightbox{background:rgba(0,0,0,.95);}
+  .menu-card:hover{box-shadow:0 20px 36px -20px rgba(0,0,0,.22);}
+  .dot{background:#d4d4d4;}
+  .dot.active{background:#111;}
+  .insta-overlay{background:rgba(0,0,0,.55);}
+  .hairline{background:linear-gradient(90deg,transparent,rgba(0,0,0,.35),transparent);}
+  ::selection{background:#111;color:#fff;}
 </style>
+
 </script>
 
 <style>
